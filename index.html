@@ -25,7 +25,9 @@
     <meta name="twitter:description" content="Проектирование и реализация премиальных бассейнов, SPA и wellness-пространств под ключ.">
     <meta name="twitter:image" content="https://pteampools.ru/assets/og-pteam-pools.jpg">
     <link rel="preload" href="assets/hero-pool-spa.webp" as="image" type="image/webp" fetchpriority="high">
+    <link rel="preload" href="assets/hero-pool-spa-1400.jpg" as="image" type="image/jpeg" fetchpriority="high">
     <link rel="stylesheet" href="styles.css">
+    <script src="assets/form.js" defer></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -82,6 +84,7 @@
             height="788"
             alt="Премиальный бассейн и SPA-зона"
             fetchpriority="high"
+            loading="eager"
             decoding="async"
           >
         </picture>
@@ -120,40 +123,32 @@
           <h2>Мы соединяем эстетику воды с управляемой технической моделью</h2>
         </div>
         <p>
-          PTEAM ведет проект от технической модели, концепции и гидравлических расчетов до запуска,
-          обучения персонала и дальнейшего сервиса. В фокусе: координация разделов, долговечность
-          чаши, комфортная вода, тихое оборудование, световые сценарии и отделка для интенсивной эксплуатации.
+          PTEAM это команда профессионалов с опытом ведения проектов от технической модели,
+          концепции и гидравлических расчетов до запуска, обучения персонала и дальнейшего сервиса.
+          В фокусе: координация разделов, долговечность материалов и оборудования, безопасная вода
+          и отделка премиум класса.
         </p>
       </section>
 
       <section class="section services" id="services">
         <div class="section-heading">
-          <p class="eyebrow">Компетенции</p>
+          <p class="eyebrow">Наши компетенции</p>
           <h2>Что строим</h2>
         </div>
         <div class="service-grid">
           <article>
-            <span class="service-icon" aria-hidden="true">⌁</span>
             <h3>Общественные бассейны</h3>
-            <p>Спортивные, рекреационные и гостиничные чаши с расчетом потоков, норм эксплуатации и инженерных нагрузок.</p>
+            <p>Спортивные, рекреационные и гостиничные бассейны и SPA с расчетом архитектурных и технических решений, на основе современных норм эксплуатации и инженерных нагрузок.</p>
           </article>
           <article>
-            <span class="service-icon" aria-hidden="true">◌</span>
             <h3>Частные бассейны и SPA</h3>
             <p>Переливные, скиммерные и infinity-чаши, купели, гидромассажные зоны, хаммамы и сауны.</p>
           </article>
           <article>
-            <span class="service-icon" aria-hidden="true">◌</span>
-            <h3>Spa и wellness</h3>
-            <p>Гидромассажные зоны, купели, хаммамы, сауны, душевые впечатлений и релакс-пространства.</p>
-          </article>
-          <article>
-            <span class="service-icon" aria-hidden="true">▧</span>
             <h3>Проектирование и инженерные системы</h3>
             <p>Координация разделов, фильтрация, водоподготовка, осушение, вентиляция, теплоснабжение и диспетчеризация.</p>
           </article>
           <article>
-            <span class="service-icon" aria-hidden="true">✦</span>
             <h3>Реконструкция</h3>
             <p>Аудит существующей чаши, модернизация оборудования, обновление отделки и снижение шума.</p>
           </article>
@@ -163,7 +158,7 @@
       <section class="section projects" id="projects">
         <div class="section-heading">
           <p class="eyebrow">Портфолио</p>
-          <h2>Форматы объектов</h2>
+          <h2>Победитель конкурса</h2>
         </div>
         <div class="project-layout">
           <article class="featured-project">
@@ -172,7 +167,8 @@
               width="1600"
               height="1200"
               alt="Реализованный частный бассейн с переливной кромкой"
-              loading="lazy"
+              fetchpriority="low"
+              loading="eager"
               decoding="async"
             >
             <div>
@@ -204,7 +200,7 @@
       <section class="section realized" id="gallery">
         <div class="section-heading">
           <p class="eyebrow">Реализованные проекты</p>
-          <h2>Живые объекты PTEAM</h2>
+          <h2>Наша гордость</h2>
         </div>
         <div class="realized-grid">
           <article class="realized-card wide">
@@ -262,7 +258,7 @@
             <img src="assets/projects/private-overflow-pool.jpg" width="1600" height="1200" alt="Частный переливной бассейн у дома" loading="lazy" decoding="async">
             <div>
               <span>Частный бассейн</span>
-              <h3>Переливная чаша у резиденции</h3>
+              <h3>Щелевой переливной бассейн</h3>
               <p>Проектирование чаши, инженерии, скрытого оборудования и отделки в единой архитектурной логике дома.</p>
               <ul>
                 <li>переливной контур</li>
@@ -309,7 +305,7 @@
           <article>
             <span>Отзывы</span>
             <h3>Благодарственные письма</h3>
-            <p>В архиве компании есть отзыв по общественному объекту и письмо-благодарность. Показываем документы по запросу, без размещения тяжелых файлов на сайте.</p>
+            <p>В архиве компании есть отзыв по общественному объекту и письмо-благодарность.</p>
           </article>
           <article>
             <span>Признание</span>
@@ -319,7 +315,7 @@
           <article>
             <span>Проектность</span>
             <h3>Рабочая документация</h3>
-            <p>Проектные комплекты, презентации объекта и инженерные схемы доступны для знакомства после первичной консультации.</p>
+            <p>Проектные комплекты, презентации объекта и инженерные схемы доступны для ознакомления после первичной консультации.</p>
           </article>
         </div>
       </section>
@@ -345,7 +341,7 @@
           <article>
             <span>По запросу</span>
             <h3>Проектная документация</h3>
-            <p>Образцы проектных комплектов, схем, узлов и презентаций решения. Тяжелые PDF не загружаем на сайт.</p>
+            <p>Образцы проектной документации, схем, узлов и презентаций решения предоставим по запросу.</p>
             <a class="document-link" href="#contact">Запросить комплект</a>
           </article>
         </div>
@@ -399,7 +395,7 @@
             <span>03</span>
             <div>
               <h3>Строительство</h3>
-              <p>Ведем чашу, гидроизоляцию, оборудование, отделку, пусконаладку и контроль качества воды.</p>
+              <p>Строим чашу, собираем оборудование, выполняем отделочные работы, пусконаладку и контроль качества воды.</p>
             </div>
           </li>
           <li>
@@ -427,14 +423,14 @@
             <span>Краснодар, ул. Порт-Артуровская, 10</span>
           </div>
         </div>
-        <form class="contact-form">
+        <form class="contact-form" id="lead-form" action="/api/lead" method="post">
           <label>
             Имя
-            <input type="text" name="name" placeholder="Как к вам обращаться">
+            <input type="text" name="name" placeholder="Как к вам обращаться" autocomplete="name" required>
           </label>
           <label>
             Телефон
-            <input type="tel" name="phone" placeholder="+7">
+            <input type="tel" name="phone" placeholder="+7" autocomplete="tel" required>
           </label>
           <label>
             Формат объекта
@@ -451,7 +447,12 @@
             Коротко о задаче
             <textarea name="message" rows="4" placeholder="Площадь, локация, сроки, пожелания"></textarea>
           </label>
+          <label class="form-honeypot" aria-hidden="true">
+            Не заполняйте это поле
+            <input type="text" name="company" tabindex="-1" autocomplete="off">
+          </label>
           <button class="button primary" type="submit">Отправить заявку</button>
+          <p class="form-status" data-form-status role="status" aria-live="polite"></p>
         </form>
       </section>
     </main>

@@ -11,33 +11,9 @@
 }
 
 @font-face {
-  font-family: "Montserrat";
-  src: url("assets/fonts/Montserrat-Italic-VariableFont_wght.ttf") format("truetype");
-  font-weight: 100 900;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
   font-family: "Montserrat Head";
-  src: url("assets/fonts/Montserrat-SemiBold.ttf") format("truetype");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Montserrat Head";
-  src: url("assets/fonts/Montserrat-Bold.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Montserrat Head";
-  src: url("assets/fonts/Montserrat-ExtraBold.ttf") format("truetype");
-  font-weight: 800;
+  src: url("assets/fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+  font-weight: 600 800;
   font-style: normal;
   font-display: swap;
 }
@@ -177,7 +153,7 @@ a {
 .hero-content {
   position: relative;
   z-index: 2;
-  width: min(700px, calc(100% - 40px));
+  width: min(900px, calc(100% - 40px));
   margin: 0 0 clamp(170px, 19vh, 230px) clamp(20px, 7vw, 92px);
 }
 
@@ -204,14 +180,16 @@ p {
 
 h1 {
   margin-bottom: 22px;
-  max-width: 700px;
+  max-width: 900px;
   font-family: "Montserrat Head", "Montserrat", ui-sans-serif, system-ui, sans-serif;
-  font-size: clamp(38px, 5.1vw, 70px);
+  font-size: clamp(38px, 4.25vw, 62px);
   font-weight: 700;
-  line-height: 1.04;
+  line-height: 1.08;
   letter-spacing: 0;
-  overflow-wrap: break-word;
-  hyphens: auto;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+  text-wrap: balance;
 }
 
 h2 {
@@ -333,6 +311,8 @@ h3 {
   margin: 40px 0 0;
   color: var(--muted);
   font-size: 20px;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .section-heading {
@@ -371,20 +351,8 @@ h3 {
 }
 
 .service-grid article {
-  min-height: 250px;
+  min-height: 210px;
   padding: 26px;
-}
-
-.service-icon {
-  display: grid;
-  place-items: center;
-  width: 48px;
-  height: 48px;
-  margin-bottom: 26px;
-  border-radius: 50%;
-  color: var(--water);
-  background: rgba(94, 128, 139, 0.12);
-  font-size: 28px;
 }
 
 .service-grid p,
@@ -810,6 +778,38 @@ h3 {
   font-weight: 760;
 }
 
+.form-honeypot {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.form-status {
+  min-height: 22px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.form-status[data-state="success"] {
+  color: #3d6b58;
+}
+
+.form-status[data-state="error"] {
+  color: #8b3f3f;
+}
+
+.form-status[data-state="pending"] {
+  color: var(--water);
+}
+
+.contact-form button:disabled {
+  cursor: wait;
+  opacity: 0.72;
+}
+
 input,
 select,
 textarea {
@@ -889,6 +889,10 @@ textarea {
 }
 
 @media (max-width: 640px) {
+  html {
+    scroll-behavior: auto;
+  }
+
   .site-header {
     padding: 14px 18px;
   }
@@ -906,14 +910,18 @@ textarea {
     min-height: 900px;
   }
 
+  .hero-image {
+    transform: translateZ(0);
+  }
+
   .hero-content {
     width: calc(100% - 36px);
     margin: 0 18px 278px;
   }
 
   h1 {
-    font-size: clamp(32px, 9.2vw, 40px);
-    line-height: 1.08;
+    font-size: clamp(28px, 7.8vw, 34px);
+    line-height: 1.14;
   }
 
   .hero-actions {
@@ -925,6 +933,9 @@ textarea {
     right: 18px;
     bottom: 20px;
     grid-template-columns: 1fr;
+    background: rgba(43, 41, 42, 0.7);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
   }
 
   .hero-metrics div {
@@ -967,6 +978,10 @@ textarea {
   .featured-project,
   .featured-project img {
     min-height: 430px;
+  }
+
+  .realized-card:hover img {
+    transform: none;
   }
 
   .featured-project div {
